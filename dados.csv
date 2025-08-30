@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Carregar o arquivo CSV
+df = pd.read_csv('dados.csv')  # O arquivo CSV está na mesma pasta
+
+# Organizar as colunas (exemplo de ordenação por nome)
+df = df.sort_values('Nome')
+
+# Salvar como Excel
+df.to_excel('dados_organizados.xlsx', index=False)
+
+print("Arquivo Excel gerado com sucesso!")
